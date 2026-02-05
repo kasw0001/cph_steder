@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+  <script type="text/javascript" src="cph.js"></script>
+</head>
+<style>
+#kunstnerinfo {
+  width: 30vw;
+  min-width: 400px;
+  font-size: 1.5rem;
+  transform: translateY(-20px);
+  animation: draw .5s 0s ease-out forwards;
+}
+@keyframes draw {
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+::backdrop {
+  backdrop-filter: blur(3px);
+}
+circle:hover {
+  fill: rebeccapurple;
+  transition: 0.5s;
+  cursor: pointer;
+}
+</style>
+
+<body>
+    <section>
+        <h1>Yndlingssteder i København</h1>
+        <h2>Velkommen. Klik på en prik for at høre mere om mine favoritsteder.</h2>
+       
+         <div id="map"></div>
+          <article id="kunstnerinfo" popover>
+            <h3 id="titel"></h3>
+            <p id="kunstnertekst"></p>
+            <img src="" alt="" id="stedbillede">
+          </article>
+      
+    </section>
+   
+</body>
+
+</html>

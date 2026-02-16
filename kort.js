@@ -68,7 +68,7 @@ fillColor = selected.getAttribute("fill");
 steder.forEach(sted => {
     if (sted.sted === selectedId) {
         document.querySelector("#tekst").textContent = sted.tekst;
-        document.querySelector("#stedbillede").src ="billeder/" + sted.billede + ".png";
+        document.querySelector("#stedbillede").src ="billeder/" + sted.billede + ".webp";
         document.querySelector("#titel").textContent = sted.titel;
     }
 });

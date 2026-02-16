@@ -11,7 +11,7 @@ const steder = [
     {
       "sted":"grav",
       "titel":"📍 Hans Scherfig's gravsted",
-      "tekst":"Et gravsted på Assistens Kirkegård er ikke bare et stykke jord med en sten - det er et lille stykke historie midt i byen. Her hviler kister og urner under gamle trækroner, langs snoede stier, hvor årstidernes skiften sætter deres eget præg på stedet.",
+      "tekst":"Her finder du forfatteren Hans Scherfigs gravsted, som er noget helt særligt. Stenen består af en skildpadde - et symbol på tidens ro og et ekko af de mange dyr, Scherfig portrætterede i sine malerier. Børnene elsker ofte at klatre og lege på skulpturen, så stedet bliver både lærerigt og sjovt at opleve. Under de gamle trækroner kan I gå en tur langs stien, nyde naturen og mærke årstidernes skiften, mens I lærer lidt om Scherfig og hans verden.",
       "billede":"gravsted"
     },
     {

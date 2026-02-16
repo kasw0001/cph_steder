@@ -3,23 +3,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 const steder = [
     {
-      "sted":"Etta",
-      "titel":"📍 Etta",
-      "tekst":"Her kan man få den lækreste slushice Matcha og gode vibes",
-      "billede":"matcha"
+      "sted":"sti",
+      "titel":"📍 Hyggelig sti",
+      "tekst":"Her starter en flot sti gennem Assistentens Kirkegård. Følg stien og oplev naturen og de spændende  gravsteder. Turen god til børnefamilier og giver mulighed for både oplevelse, læring og en hyggelig pause sammen.",
+      "billede":"sti"
     },
     {
-      "sted":"Leanowski",
-      "titel":"📍 Bip Bip Bar",
-      "tekst":"Et hyggeligt sted at mødes med venner, med arkadespil og god stemning",
-      "billede":"bip"
+      "sted":"grav",
+      "titel":"📍 Hans Scherfig's gravsted",
+      "tekst":"Et gravsted på Assistens Kirkegård er ikke bare et stykke jord med en sten - det er et lille stykke historie midt i byen. Her hviler kister og urner under gamle trækroner, langs snoede stier, hvor årstidernes skiften sætter deres eget præg på stedet.",
+      "billede":"gravsted"
     },
     {
-      "sted":"Plugin_Saunagus",
-      "titel":"📍 Plugin Heat Club",
-      "tekst":"Det perfekte sted til at afkoble og blive genopfrisket med saunagus og isbadning",
-      "billede":"sauna"
-    }
+      "sted":"pause",
+      "titel":"📍 Pausested",
+      "tekst":"Hvis du trænger til en pause, så stå her og træk vejret ved den fine sø. Bliv her, indtil du føler dig klar til at gå tilbage til løbet igen. Alle har brug for en pause og derfor kan du blive her, sidde på bænken og tage en slapper.",
+      "billede":"pause"
+    },
+    {
+        "sted":"blomster",
+        "titel":"📍 Blomsterområde",
+        "tekst":"På Assistens Kirkegård findes der et særligt blomsterområde, som er noget helt andet end de gamle, klassiske gravsteder. Her er stemningen lysere og mere åben. I stedet for høje gravsten og indhegnede familiegravsteder mødes man af blomsterbede, grønne planter og små, personlige mindetegn. Det føles som et fredeligt sted, hvor naturen spiller hovedrollen.",
+        "billede":"blomster"
+      }
     
     ];
 
@@ -28,10 +34,10 @@ async function runProgram() {
   let selectedId;
   let fillColor;
   let active;
-  const popover = document.querySelector("#kunstnerinfo");
+  const popover = document.querySelector("#info");
     // 1. Load svg map
     //------------------------------------------------------------------------------------	
-let rawSvg = await fetch("stedercph.svg");
+let rawSvg = await fetch("KORT.svg");
 let svg = await rawSvg.text();
 document.querySelector("#map").innerHTML = svg;
 
@@ -61,8 +67,8 @@ fillColor = selected.getAttribute("fill");
     //--------------------------------------------
 steder.forEach(sted => {
     if (sted.sted === selectedId) {
-        document.querySelector("#kunstnertekst").textContent = sted.tekst;
-        document.querySelector("#stedbillede").src ="billeder/" + sted.billede + ".jpg";
+        document.querySelector("#tekst").textContent = sted.tekst;
+        document.querySelector("#stedbillede").src ="billeder/" + sted.billede + ".png";
         document.querySelector("#titel").textContent = sted.titel;
     }
 });

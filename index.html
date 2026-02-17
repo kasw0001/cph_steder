@@ -5,57 +5,31 @@
     <meta charset="UTF-8">
     <title>Forside</title>
   <script type="text/javascript" src="kort.js"></script>
+  <link rel="stylesheet" href="general.css">
 </head>
 <style>
-@media (min-width: 600px) {
-  #info {
-    width: 30vW;
-    min-width: 450px;
-}
-}
-#info {
-  max-width: 250px;
-  font-size: 1.2rem;
-  transform: translateY(-20px);
-  animation: draw .5s 0s ease-out forwards;
-  border-radius: 15px;
-}
-@keyframes draw {
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-img {
-  max-width: 100%;
-  object-fit: contain;
-}
-#map {
-  max-width: 700px;
-}
-::backdrop {
-  backdrop-filter: blur(3px);
-}
-circle:hover {
-  fill: rebeccapurple;
-  transition: 0.5s;
-  cursor: pointer;
-}
+
 </style>
 
 <body>
+  <main>
     <section>
-        <h1>Velkommen til Assistentens Kirkegård</h1>
-        <h2>Klik på en prik for at høre mere om stederne.</h2>
-       
+      <div class="portfolio">
+      <h1>Velkommen til Vores Portfolio</h1>
+      <h3>Klik herunder for at se koden til den interaktive SVG og de to Motion Graphics videoer:</h3>
+      <div class="knapper_box">
+       <a href="https://github.com/kasw0001/hans_scherfig" >Se Github Repository</a>
+       <a href="https://github.com/kasw0001/hans_scherfig" >Se Youtube Playliste</a>
+      </div>
+      </div>
          <div id="map"></div>
           <article id="info" popover>
             <h3 id="titel"></h3>
             <p id="tekst"></p>
             <img src="" alt="" id="stedbillede">
           </article>
-      
     </section>
+  </main>
    
 </body>
 
